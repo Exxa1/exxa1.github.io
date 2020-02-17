@@ -1,0 +1,285 @@
+:root {
+  --main-background: linear-gradient(
+    180deg,
+    #2d0f0e 0%,
+    #7a1615 9.38%,
+    #9b3a26 53.12%,
+    #762e1d 99.98%,
+    #c26238 99.99%
+  );
+  --light-orange-color: #f2a25c;
+  --light-brown-color: #d97a43;
+  --brown-color: #a64521;
+  --dark-brown-color: #7a1615;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--main-background);
+}
+
+/* The Navigation */
+.hamburger {
+  position: relative;
+  width: 11vw;
+  min-width: 50px;
+  max-width: 70px;
+  height: 7vw;
+  min-height: 30px;
+  max-height: 45px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  z-index: 10001;
+}
+
+.hamburgerline {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  background: #d97a43;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.hamburgerline.line1 {
+  top: 0%;
+  bottom: 79.59%;
+}
+
+.hamburgerline.line2 {
+  top: 40.82%;
+  bottom: 38.78%;
+}
+
+.hamburgerline.line3 {
+  top: 79.59%;
+  bottom: 0%;
+}
+
+nav.open .hamburger {
+  position: fixed;
+  right: 0;
+}
+
+nav.open .hamburger .line1 {
+  position: absolute;
+
+  background: #d97a43;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  transform: rotate(-45deg);
+}
+
+nav.open .hamburger .line2 {
+  display: none;
+}
+
+nav.open .hamburger .line3 {
+  position: absolute;
+
+  background: #d97a43;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.bignav {
+  display: none;
+}
+
+nav.open .bignav {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(217, 122, 67, 0.51) 100%
+    ),
+    #4a0002;
+  z-index: 10000;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.bignav h2 {
+  width: fit-content;
+  margin: auto auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 50px;
+  color: var(--light-orange-color);
+}
+
+/* The Headline [svg file]*/
+header {
+  position: relative;
+}
+
+/* Section Lines*/
+section {
+  position: relative;
+  width: 90%;
+  margin: 200px auto;
+}
+
+.sectionlines {
+  position: relative;
+}
+
+.sectionlines .line1,
+.sectionlines .line2 {
+  position: absolute;
+  border: 1px solid var(--light-orange-color);
+}
+
+.sectionlines .line1 {
+  right: calc(50% + 80px);
+  left: 0;
+  top: 50%;
+}
+
+.sectionlines .line2 {
+  left: calc(50% + 80px);
+  right: 0;
+  top: 50%;
+}
+
+.sectionlines h2 {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  text-align: center;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 2em;
+  color: var(--light-brown-color);
+}
+
+/* Content */
+
+.content {
+  position: relative;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 50px;
+  /* background-color: white; */
+}
+
+.content p {
+  text-align: justify;
+  font-family: Roboto;
+  color: var(--light-brown-color);
+}
+
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 60vw;
+  max-height: 500px;
+  max-width: 450px;
+  /* background-color: green; */
+}
+
+/* About Us */
+.name {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.2em;
+  color: var(--light-brown-color);
+}
+
+.profpic {
+  position: absolute;
+  bottom: 0;
+  height: calc(100% - 50px);
+  width: 100%;
+  background-color: blue;
+}
+
+/* Works */
+
+#works .sectionlines .line1 {
+  right: calc(50% + 100px);
+}
+
+#works .sectionlines .line2 {
+  left: calc(50% + 100px);
+}
+
+h3 {
+  text-align: center;
+  font-family: Roboto;
+  color: var(--light-brown-color);
+  font-weight: 300;
+}
+
+#works .grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#works .box {
+  height: 40vw;
+}
+
+.pic {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+}
+
+.category {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+/* contact */
+#contact p {
+  position: relative;
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 1.1em;
+}
+
+#contact .left {
+  position: absolute;
+  left: 5vw;
+}
+
+#firstmobile {
+  margin-bottom: 40px !important;
+}
+
+#contact p .icon {
+  position: absolute;
+  top: -4px;
+  height: 1.4em;
+}
