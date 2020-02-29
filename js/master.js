@@ -5,3 +5,12 @@ var openNav = function() {
 };
 
 nav.addEventListener("click", openNav);
+
+
+// Email
+
+var email = document.getElementById("jsemail");
+var type = "info";
+var domain = "leaplight.hu";
+
+email.innerHTML = type + "@" + domain;
