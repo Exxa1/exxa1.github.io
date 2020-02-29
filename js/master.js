@@ -5,3 +5,5 @@ var openNav = function() {
 };
 
 nav.addEventListener("click", openNav);
+
+// Email
