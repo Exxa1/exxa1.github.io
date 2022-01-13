@@ -10,7 +10,7 @@ about.style.display = "none";
 
 function portfoliof() {
   contact.style.display = "none";
-  about.style.display = "block";
+  about.style.display = "none";
   portfolio.style.display = "block";
 }
 
