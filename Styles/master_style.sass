@@ -23,10 +23,10 @@ nav
   display: flex
   flex-direction: row
   align-items: flex-start
-  position: absolute
+  position: relative
   width: 100%
   height: 48px
-  top: 500px
+  margin-top: 160px
   justify-content: space-evenly
 
 .navItem
@@ -48,12 +48,16 @@ nav
   position: relative
   width: 567px
   height: 254px
-  left: calc(50% - 567px/2)
+  margin: auto
   margin-top: 120px
 
-#namePlateSVG
+.namePlateSVG
   width: inherit
   height: inherit
+
+#smallNamePlate
+  display: none
+
 
 p
   font-family: Raleway
@@ -65,7 +69,7 @@ section
   position: relative
   width: 100%
   text-align: center
-  margin-top: 300px
+  margin-top: 150px
 
 .container
   width: 90%
@@ -123,3 +127,32 @@ footer
   svg
     width: 200px
     margin-top: 50px
+
+$small-screen: 649px
+@media screen and (max-width: $small-screen)
+  #bigNamePlate
+    display: none
+  #smallNamePlate
+    display: block
+    margin: auto
+  #namePlate
+    width: 90%
+    height: unset
+
+  nav
+    flex-direction: column
+    align-items: center
+    gap: 20px
+
+  #portfolio
+    #inPortfolio
+      img
+        width: 100%
+        max-height: none
+
+  #contact p
+    width: unset
+    line-height: 1.5em
+
+  #aboutPic
+    max-width: 100%
