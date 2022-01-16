@@ -26,6 +26,16 @@ function aboutf() {
   portfolio.style.display = "none";
 }
 
+// // portfolio
+// var classname = document.getElementsByClassName("portfolioimg");
+//
+// var zoomin = function(i) {
+//     classname(i).classList.toggle("singleview");
+// };
+//
+// for (var i = 0; i < classname.length; i++) {
+//     classname[i].addEventListener('click', zoomin, false);
+
 // Email
 
 var email = document.getElementById("jsemail");
